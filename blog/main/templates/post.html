@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}" />
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    </head>
+    <body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                <section id="main" class="main special">
+                    <h1 style="text-align: center">{{post.title}}</h1>
+                    <h5 style="text-align: center">{{post.time}}</h3>
+                    <img src="{% static 'images/'%}{{post.post_id}}.JPG" style="width: 30%; height: 30%; display: block; margin-left: auto; margin-right: auto" alt="{{post.post_id}}" class="image"/>
+                    <p>{{post.content|safe}}</p>
+                    <ul class="actions">
+                        <li><a href="/" class="button">Back to Main</a></li>
+                    </ul>
+                </section>
+            </div>
+
+        <!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+    </body>
+</html>

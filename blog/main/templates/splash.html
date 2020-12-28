@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>Subin Kim</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}" />
+		<link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="inner">
+					<h1>Subin Kim</h1>
+					<p>A blog of everything and absolutely nothing at all</p>
+				</div>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Banner -->
+					<section id="intro" class="main">
+						<img src="{% static 'images/clementine.png' %}" style="width: 20%; height: 20%; display: block; margin-left: auto; margin-right: auto" alt=clementine_icon class="image"/>
+						<h2>🍊About Me🍊</h2>
+						<p>Hi there! I'm a sophomore at the University of Pennsylvania studying linguistics and computer science.<br/>
+						As you can probably tell, I love clementines a lot. I also love books 📚, music 🎶, and travel 🗺!<br/>
+						This is a personal blog page I created with Django. Thanks for dropping by and feel free to stay a while! 🧡
+						</p>
+					</section>
+
+				<!-- Items -->
+					<section class="main items">
+						{% for post in posts %}
+						<article class="item">
+							<header>
+								<a href="/post/{{post.post_id}}">
+									<img src="{% static 'images/'%}{{post.post_id}}.JPG" alt="My image" />
+								</a>
+								<h3>{{post.title}}</br> {{post.time}} </h3>
+							</header>
+							<p>{{post.description}}</p>
+							<ul class="actions">
+								<li><a href="/post?id={{post.post_id}}" class="button">Read</a></li>
+							</ul>
+						</article>
+						{% endfor %}
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://github.com/subinkim00" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/subin-kim00/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:subinkim@sas.upenn.edu" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Subin Kim. Design: <a href="https://templated.co">TEMPLATED</a>.
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>
