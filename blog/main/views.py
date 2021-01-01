@@ -5,7 +5,7 @@ from markdown2 import Markdown
 
 def splash_view(request):
     posts = Post.objects.order_by('-time')
-    return render(request, "splash.html", {'posts': posts})
+    return render(request, "index.html", {'posts': posts})
 
 def post_view(request):
     # if the post id does not exist, redirect to the splash page
