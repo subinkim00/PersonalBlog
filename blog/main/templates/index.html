@@ -36,8 +36,8 @@
 						{% for post in posts %}
 						<article class="item">
 							<header>
-								<a href="/post/{{post.post_id}}">
-									<img src="{% static 'images/'%}{{post.post_id}}.JPG" alt="My image" />
+								<a href="/post?id={{post.post_id}}">
+									<img src="{% static 'images/'%}{{post.post_id}}.jpg" alt="My image" />
 								</a>
 								<h3>{{post.title}}</br> {{post.time}} </h3>
 							</header>
