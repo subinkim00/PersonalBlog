@@ -26,7 +26,7 @@ SECRET_KEY = 'hq1y)rna1*934dsb9$y@e-n9achxq-^a#io=%hymd2mbzs9!$^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['subinkim.pythonanywhere.com']
+ALLOWED_HOSTS = ['subinkim.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
